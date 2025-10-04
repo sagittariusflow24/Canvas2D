@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assignment 1 — Canvas 2D</title>
+  <style>
+    :root{--bg:#eef6ff}
+    html,body{height:100%;margin:0;font-family:Arial,system-ui;background:var(--bg)}
+    .wrap{max-width:1100px;margin:18px auto;padding:12px}  
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .meta{font-size:14px;color:rgb(0, 0, 0)}
+    .controls{display:flex;gap:8px;align-items:center}
+    button{padding:6px 10px;border-radius:6px;border:1px solid #0073ff;background:#e9c008;cursor:pointer}
+    canvas{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(160, 6, 6, 0.247);background:#fff;margin-top:12px}
+    footer{margin-top:10px;font-size:13px;color:rgb(6, 0, 65)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="meta">รหัส: <strong>6712231095</strong> &nbsp; ชื่อ: <strong>นาย รัตภูมิ พุ่มโพธิ์ศรี</strong> &nbsp; วิชา: <strong>COMP281</strong> — <strong>Assignment 01</strong></div>
+      <div class="controls">
+        <button id="toggleAnim" >Pause</button>
+        <button id="toggleSky">Sunset Mode</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- id ตามที่คุณให้ไว้ -->
+      <canvas id="myCanvas" aria-label="Canvas landscape"></canvas>
+    </main>
+
+    <footer>
+      ห้ามใช้ drawImage() และห้ามใช้ไลบรารีวาดภาพ — วาดทั้งหมดด้วย Canvas 2D API
+    </footer>
+  </div>
+
+  <!-- โหลดสคริปต์เป็น module (deferred by spec) -->
+  <script type="module" src="index.js"></script>
+</body>
+</html>
